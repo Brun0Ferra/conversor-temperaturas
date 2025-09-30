@@ -38,9 +38,11 @@ form.addEventListener("submit", (e) => {
         // - o nome da unidade (u)
         // - o valor convertido com 1 casas decimais
         // - o símbolo correspondente (°C, °F ou K)
-      return `<p class="${u}"><b>${u}:</b> ${v.toFixed(1)} ${unidadeSimbolo}</p>`;})
+      return `<p class="${u}"><b>${u}:</b> ${v.toFixed(1)} ${unidadeSimbolo}</p>`;}) 
       .reduce((acc,cur) => acc+cur,""); // junta todos os parágrafos em uma única string
-
+      // acc = acumulador (resultado parcial até agora)
+      // cur = item atual do array sendo processado
+    
     // Exibe os resultados na tela
     resultado.className = "resultado-ok";
     resultado.innerHTML = html;
@@ -76,4 +78,5 @@ for (let i = 0; i < 100; i++) {
 
   ceu.appendChild(nuvem);
 }
+
 
